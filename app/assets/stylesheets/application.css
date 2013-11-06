@@ -1,0 +1,46 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require foundation_and_overrides
+ */
+
+#logo img {
+
+	max-height: 78px;
+	max-width: 288px;
+	padding: 1em 0 .5em 2.5em;
+}
+
+#gfl-main-nav {
+	padding: 3em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	color: #ffffff;
+}
+
+
+#header a:visited {
+    color: #fff;
+}
+
+#banner {
+	background-color: #0062a4;
+	max-width: 100%;
+	padding: 2.5em;
+	min-height: 8em;
+}
+
+h1, h2, h3 {
+	color: #008cd2;
+}
