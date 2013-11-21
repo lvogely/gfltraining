@@ -40,6 +40,7 @@ gem "compass-rails", "~> 2.0.alpha.0" # you need this or you get an err
 
 gem 'zurb-foundation'
 
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+[
+	"Lifeguard Training Prerequisite", 
+	"Lifeguard Training Course", 
+	"Lifeguard Blended Learning Course",
+	"Lifeguard Review",
+	"CPR/AED for the Professional Rescuer Review",
+	"CPR/AED for the Professional Rescuer ",
+	"Waterfront Skills Module",
+	"Lifeguard Instructor Course",
+	"Pool Operator Course"
+].each do |name|
+	
+	ClassType.create!( name: name)
+end

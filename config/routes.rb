@@ -2,9 +2,14 @@ Training::Application.routes.draw do
   
   resources :training_classes
   root :to => 'training_classes#index'
+  get '/class' => 'training_classes#show', as: 'training_class_path'
+  #We should change this URL to include the class title, city and zip - what else coud uniquely indentify it and make it SEO friendly?
 
   resources :pages
   get '/about' => 'pages#about'
+
+  resources :pages
+  get '/options' => 'pages#options'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

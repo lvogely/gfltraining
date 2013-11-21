@@ -1,4 +1,115 @@
-<p id="notice"><%= notice %></p>
+  <!-- Main Page Content and Sidebar -->
+ 
+ <ul class="breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Features</a></li>
+  <li class="unavailable"><a href="#">Gene Splicing</a></li>
+  <li class="current"><a href="#">Cloning</a></li>
+  </ul>
 
-<%= link_to 'Edit', edit_training_class_path(@training_class) %> |
-<%= link_to 'Back', training_classes_path %>
+ <div class="row">
+ 
+    <!-- Contact Details -->
+    <div class="large-9 columns">
+ 
+      <h1>Title of Lifeguard Class</h1>
+      <h5>Saturday, November 16, 2013 from 9:30 AM to 4:00 PM (EST)</h5>
+      <h5>Organized by American Pool Maryland</h5>
+ 
+ 	<div class="row">
+		 	<div class="panel large-10 columns">      
+		      	<section>
+		      	<h4>Registration</h4>
+			      	<div class="row">
+		           		<div class="large-2 columns">Type</div>
+			      		<div class="large-2 columns">End</div>
+			      		<div class="large-2 columns">Price</div>
+			      		<div class="large-2 columns">Fee</div>
+			      		<div class="large-2 columns">
+							<label for="customDropdown1">Qty</label>
+							      <select id="customDropdown1" class="small">
+							        <option>1</option>
+							        <option>2</option>
+							        <option>3</option>
+							        <option>4</option>
+							        <option>5</option>
+							      </select>
+			      		</div>
+
+			      	<hr/>
+			      	</div>
+			      	
+			    	<div class="row">
+		      			<div class="large-1 large-offset-9 columns"><a href="#" class="button">Register</a></div>
+		      		</div>
+		      	</section>
+	    	</div>
+ 	</div>
+
+ 	<div class="row">
+	 	<div class="panel large-10 columns">
+	      	<h4>Event Details</h4>
+	      	<p>Full Training Class Description</p>
+	      	<p>Share GFL Training Class</p>
+	    </div>
+ 	</div>
+
+ 	</div>
+    <!-- End Contact Details -->
+ 
+ 
+    <!-- Sidebar -->
+
+    <div class="large-2 columns">
+      <h5>When and Where</h5>
+      <!-- Clicking this placeholder fires the mapModal Reveal modal -->
+      <p>
+        <a href="" data-reveal-id="mapModal"><img src="http://placehold.it/400x280"></a><br />
+        <a href="" data-reveal-id="mapModal">View Map</a>
+      </p>
+      <p>
+        Brick Bodies<br />
+        123 Padonia Road<br />
+        Barsoom, MA 95155
+      </p>
+      <p>Saturday, November 16, 2013 from 9:30 AM to 4:00 PM (EST)</p>
+      <a href="#">Add to my calendar</a>
+    
+       <hr />
+
+    </div>
+
+    <div class="large-3 columns">
+      <div class="panel">
+      <h5>About the Organizer</h5>
+      <!-- Clicking this placeholder fires the mapModal Reveal modal -->
+      <p>Description about organizer</p>
+      <p>
+        Contact Info:<br/>
+        Brick Bodies<br />
+        123 Padonia Road<br />
+        Barsoom, MA 95155
+      </p>
+      <a href="#">Contact the organizer</a>
+      </div>
+    </div>
+
+    <!-- End Sidebar -->
+  
+
+  </div>
+ 
+  <!-- End Main Content and Sidebar -->
+
+  
+  <!-- Map Modal -->
+ 
+  <div class="reveal-modal" id="mapModal">
+    <h4>Where We Are</h4>
+    <p><img src="http://placehold.it/800x600" /></p>
+ 
+    <!-- Any anchor with this class will close the modal. This also inherits certain styles, which can be overriden. -->
+    <a href="#" class="close-reveal-modal">&times;</a>
+  </div>
+
+</div>

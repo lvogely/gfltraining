@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106215505) do
+ActiveRecord::Schema.define(version: 20131121220109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "class_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", force: true do |t|
     t.datetime "created_at"
@@ -22,6 +28,19 @@ ActiveRecord::Schema.define(version: 20131106215505) do
   end
 
   create_table "training_classes", force: true do |t|
+    t.integer  "class_type_id"
+    t.string   "title"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.string   "eventbrite_id"
+    t.string   "eventbrite_url"
+    t.string   "event_street"
+    t.string   "event_description"
+    t.string   "event_state"
+    t.string   "event_city"
+    t.string   "event_zip"
+    t.decimal  "event_lat",         precision: 10, scale: 8
+    t.decimal  "event_long",        precision: 11, scale: 8
     t.datetime "created_at"
     t.datetime "updated_at"
   end

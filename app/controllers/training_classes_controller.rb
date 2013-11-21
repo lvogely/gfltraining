@@ -1,5 +1,5 @@
 class TrainingClassesController < ApplicationController
-  before_action :set_training_class, only: [:show, :edit, :update, :destroy]
+  #before_action :set_training_class, only: [:show, :edit, :update, :destroy]
 
   # GET /training_classes
   # GET /training_classes.json
@@ -61,14 +61,14 @@ class TrainingClassesController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_training_class
-      @training_class = TrainingClass.find(params[:id])
-    end
+  # private
+  #   # Use callbacks to share common setup or constraints between actions.
+  #   def set_training_class
+  #     @training_class = TrainingClass.find(params[:id])
+  #   end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def training_class_params
-      params[:training_class]
-    end
+  #   # Never trust parameters from the scary internet, only allow the white list through.
+  #   def training_class_params
+  #     params[:training_class]
+  #  end
 end
