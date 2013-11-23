@@ -23,26 +23,42 @@
 
   </head>
 
-  <body>
+  <body class="page">
 
    <!-- Header and Nav -->
 
-  <div class="row" id="header">
-  <div class="large-1 columns">
+  <div class="row">
 
-    <div id="logo"><%= link_to_image("GFL-logo.jpg", root_path) %></div>
-  </div>
+    <header>
+      <div class="actions">
+        <span id="logo">
+          <a href="page.html">
+            Guard For Life - Home
+          </a>
+        </span>
 
-  <div class="large-8 large-offset-1 columns small-offset-1 medium-5">
-      <nav id="gfl-main-nav">
-          <ul class="inline-list right">
-            <li><a href="/">Find a class</a></li>
-            <li><a href="/options">Training options</a></li>
-            <li><a href="/about">About GFL Training</a></li>
-          </ul>
+        <nav class="buttons">
+          <a href="#" class="button bg-red">
+            Apply
+          </a>
+          <a href="#" class="button bg-blue">
+            Login
+          </a>
+        </nav>
+      </div>
+
+      <nav class="primary fontin">
+        <ul>
+          <li class="nav-become"><a href="#">Become a Lifeguard</a></li>
+          <li class="nav-apply"><a href="#">How To Apply</a></li>
+          <li class="nav-jobs"><a href="#">Find a Job</a></li>
+          <li class="nav-about"><a href="#">About GFL</a></li>
+        </ul>
       </nav>
+
+    </header>
+
   </div>
-</div>
 
   <!-- End Header and Nav -->
 

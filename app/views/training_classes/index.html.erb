@@ -1,6 +1,8 @@
-<div class="row" id="banner">
-  <h2><span>Find Red Cross lifeguard training in your area.</span></h2>
-</div>
+<section class="aligncenter" id="page-banner">
+    <img src="http://placehold.it/1600x225" alt="" class="banner">
+  </section>
+
+<section id="main" class="row">
 
 <ul class="breadcrumbs">
   <li><a href="#">Home</a></li>
@@ -14,6 +16,7 @@
   <form class="custom">
   <div class="row">
     <div class="large-4 columns">
+
       <label for="customDropdown1">Find by class type</label>
       <select id="customDropdown1" class="medium">
         <option>Select class</option>
@@ -89,6 +92,12 @@
       <div class="row">
         <div class="large-1 columns small-2"><img src="http://placehold.it/80x80&text=[img]" /></div>
         <div class="large-10 columns left">
+
+        <% @training_classes.each do |training_class| %>
+            <h3><%= training_class.title %></h3>
+            <p><%= training_class.description %></p>
+        <% end %>
+
           <h3><a href="/class">Lifeguard Recertification Class</a><h3>
           <h5>November 16, 2013 at 9:30 AM</h5>
           <h5>Location of 12345 Address Baltimore, Maryland</h5>
@@ -130,7 +139,7 @@
           <h3><a href="/class">Class Title</a><h3>
           <h5>November 16, 2013 at 9:30 AM</h5>
           <h5>Location of 12345 Address Baltimore, Maryland</h5>
-          <h5>Organized by this office<h5>
+          <h5>Organized by this office</h5>
           <p>This class is for lifeguards that need to be recertified before their certifications expire.</p>
           <ul class="inline-list">
             <li><a href="/class" class="button">Register</a></li>
@@ -167,5 +176,6 @@
  
   </div>
 
+</section>
  
   <!-- Footer -->
