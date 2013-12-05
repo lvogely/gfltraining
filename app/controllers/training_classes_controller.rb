@@ -5,6 +5,7 @@ class TrainingClassesController < ApplicationController
   # GET /training_classes.json
   def index
     @training_classes = TrainingClass.all
+    #@training_classes = scope.page(params[:page]).per(10)
   end
 
   # GET /training_classes/1

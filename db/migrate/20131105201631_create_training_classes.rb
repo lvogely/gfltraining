@@ -10,7 +10,7 @@ class CreateTrainingClasses < ActiveRecord::Migration
       t.string :eventbrite_id
       t.string :eventbrite_url
       t.string :event_street
-	  t.string :event_description
+	  t.text :event_description
 	  t.string :event_state
 	  t.string :event_city
 	  t.string :event_zip

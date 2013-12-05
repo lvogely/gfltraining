@@ -93,9 +93,11 @@
         <div class="large-1 columns small-2"><img src="http://placehold.it/80x80&text=[img]" /></div>
         <div class="large-10 columns left">
 
+        <h2><%= @training_classes.size %></h2>
+
         <% @training_classes.each do |training_class| %>
             <h3><%= training_class.title %></h3>
-            <p><%= training_class.description %></p>
+            <!-- <p><%= training_class.organizer %></p> -->
         <% end %>
 
           <h3><a href="/class">Lifeguard Recertification Class</a><h3>
