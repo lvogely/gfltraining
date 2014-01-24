@@ -8,9 +8,16 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
   line-height: 18px;
 }
+
+header ul {
+  font-family: Neris-SemiBold, sans-serif; 
+}
+
+.home header {
+  font-size: 10em;
+  display: block;}
 
 pre {
   background-color: #eee;
@@ -22,7 +29,7 @@ a {
   color: #000;
 
   &:hover {
-    color: #000;
+    color: #2ba6cb;
     background-color: none;
   }
 }
@@ -61,7 +68,7 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 16px;
     list-style: square;
   }
 }

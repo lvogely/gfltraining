@@ -18,8 +18,39 @@
   	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
+    <link href='/app/assets/stylesheets/normalize.css' rel='stylesheet' type='text/css'>
     <link href='/app/assets/stylesheets/application.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+  <!--
+  /**
+   * @license
+   * MyFonts Webfont Build ID 2697272, 2013-11-27T12:48:07-0500
+   * 
+   * The fonts listed in this notice are subject to the End User License
+   * Agreement(s) entered into by the website owner. All other parties are 
+   * explicitly restricted from using the Licensed Webfonts(s).
+   * 
+   * You may obtain a valid license at the URLs below.
+   * 
+   * Webfont: Neris Light by Eimantas Paškonis
+   * URL: http://www.myfonts.com/fonts/eimapas/neris/light/
+   * 
+   * Webfont: Neris Regular by Eimantas Paškonis
+   * URL: http://www.myfonts.com/fonts/eimapas/neris/regular/
+   * 
+   * Webfont: Neris SemiBold by Eimantas Paškonis
+   * URL: http://www.myfonts.com/fonts/eimapas/neris/semi-bold/
+   * 
+   * 
+   * License: http://www.myfonts.com/viewlicense?type=web&buildid=2697272
+   * Licensed pageviews: 100,000
+   * Webfonts copyright: Copyright &#x00A9; 2013 by Eimantas Paskonis. All rights
+   * reserved.
+   * 
+   * © 2013 MyFonts Inc
+  */
+
+  -->
+  <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/gfl.css">
 
   </head>
 
@@ -27,12 +58,16 @@
 
    <!-- Header and Nav -->
 
+<section class="panel top-panel">
+    <a href="http://www.guardforlife.com"> &lsaquo;&lsaquo; Go back to Guard for Life</a>
+</section>
+
   <div class="row">
 
     <header>
       <div class="actions">
         <span id="logo">
-          <a href="page.html">
+          <a href="/">
             Guard For Life - Home
           </a>
         </span>
@@ -47,12 +82,12 @@
         </nav>
       </div>
 
-      <nav class="primary fontin">
+      <nav class="primary Neris-Regular">
         <ul>
-          <li class="nav-become"><a href="#">Become a Lifeguard</a></li>
-          <li class="nav-apply"><a href="#">How To Apply</a></li>
-          <li class="nav-jobs"><a href="#">Find a Job</a></li>
-          <li class="nav-about"><a href="#">About GFL</a></li>
+          <li class="nav-register"><a href="/">Register Now</a></li>
+          <li class="nav-become"><a href="/options">Class Types</a></li>
+          <li class="nav-apply"><a href="/get-trained">How to get trained</a></li>
+          <li class="nav-jobs"><a href="/about">About our training</a></li>
         </ul>
       </nav>
 
@@ -67,5 +102,6 @@
     <%= render 'footer' %>
     
     <%= javascript_include_tag "application" %>
+    <%= yield :after_script_tags %>
   </body>
 </html>

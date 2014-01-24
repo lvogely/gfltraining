@@ -3,9 +3,25 @@ class TrainingClassesController < ApplicationController
 
   # GET /training_classes
   # GET /training_classes.json
+
   def index
-    @training_classes = TrainingClass.all
-    #@training_classes = scope.page(params[:page]).per(10)
+    @organizers = TrainingClass.all.map(&:event_organizer).uniq.sort
+    
+    if params[:organizer].present?
+        @training_classes = TrainingClass.where(event_organizer: params[:organizer])
+      else
+        @training_classes = TrainingClass.all
+    end
+
+    @training_classes = @training_classes.page(params[:page])
+
+    respond_to do |format|
+        format.html
+        format.json do
+          render json: @training_classes
+        end    
+    end
+
   end
 
   # GET /training_classes/1

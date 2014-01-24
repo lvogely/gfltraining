@@ -48,6 +48,8 @@ GEM
       tzinfo (~> 0.3.22)
     execjs (2.0.2)
     fssm (0.2.10)
+    gretel (3.0.5)
+      rails (>= 3.2.0)
     hike (1.2.3)
     httparty (0.8.3)
       multi_json (~> 1.0)
@@ -137,6 +139,7 @@ DEPENDENCIES
   coffee-rails
   compass-rails (~> 2.0.alpha.0)
   eventbrite-client
+  gretel
   jbuilder (~> 1.2)
   jquery-rails
   kaminari

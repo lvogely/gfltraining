@@ -11,6 +11,9 @@ Training::Application.routes.draw do
   resources :pages
   get '/options' => 'pages#options'
 
+  resources :pages
+  get '/get-trained' => 'pages#get-trained'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -46,7 +46,11 @@ gem 'rails_12factor', group: :production
 
 gem 'newrelic_rpm'
 
+#pagination
 gem 'kaminari'
+
+#breadcrumbs
+gem 'gretel'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

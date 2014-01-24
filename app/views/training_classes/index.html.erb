@@ -1,159 +1,70 @@
 <section class="aligncenter" id="page-banner">
-    <img src="http://placehold.it/1600x225" alt="" class="banner">
-  </section>
+  <p class="banner"></p>
+</section>
 
 <section id="main" class="row">
 
-<ul class="breadcrumbs">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Features</a></li>
-  <li class="unavailable"><a href="#">Gene Splicing</a></li>
-  <li class="current"><a href="#">Cloning</a></li>
-  </ul>
-
 <div class="row">
   <div class="panel">
-  <form class="custom">
-  <div class="row">
-    <div class="large-4 columns">
-
-      <label for="customDropdown1">Find by class type</label>
-      <select id="customDropdown1" class="medium">
-        <option>Select class</option>
-        <option>Recertification Lifeguard</option>
-        <option>Recertification Lifeguard</option>
-        <option>CPR Recertification</option>
-        <option>Blended Learning Lifeguard</option>
-      </select>
-    </div>
-    <div class="large-4 columns">
-      <label for="customDropdown1">Find by location</label>
-      <select id="customDropdown1" class="medium">
-        <option>Select a state</option>
-        <option>Delaware</option>
-        <option>Maryland</option>
-        <option>New Jeresy</option>
-        <option>Virginia</option>
-      </select>
-    </div>
-    <div class="large-4 columns">
-      <label for="customDropdown1">Find by date</label>
-      <select id="customDropdown1" class="medium">
-        <option>Select a date</option>
-        <option>Today</option>
-        <option>Tomorrow</option>
-        <option>This week</option>
-        <option>This month</option>
-      </select>
-    </div>
-  </div>
-  </div>
-</div>
-
-  <div class="row">
- <!-- Nav Sidebar -->
-    <!-- This is source ordered to be pulled to the left on larger screens -->
-    <!-- <div class="large-3 columns hide-for-small">
-      <div class="panel">
-        <a href="#"><img src="http://placehold.it/300x150&text=[img]" /></a>
-        <h5><a href="#">Refine class list</a></h5>
-          <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-          <section class="section">
-            <h5 class="title"><a href="#">All dates</a></h5>
-              <p><a href="#">Today</a></p>
-              <p><a href="#">Tomorrow</a></p>
-              <p><a href="#">This weekend</a></p>
-              <p><a href="#">This month</a></p>
-          </section>
-          <section class="section">
-            <h5 class="title"><a href="#">All locations</a></h5>
-              <p><a href="#">Delaware</a></p>
-              <p><a href="#">Maryland</a></p>
-              <p><a href="#">New Jersey</a></p>
-              <p><a href="#">Virginia</a></p>
-          </section>
-          <section class="section">
-            <h5 class="title"><a href="#">All class types</a></h5>
-              <p><a href="#">Lifeguard Certification</a></p>
-              <p><a href="#">Recertification Lifeguard</a></p>
-              <p><a href="#">CPR Recertification</a></p>
-              <p><a href="#">Blended Learning Lifeguard</a></p>
-          </section>
-        </div>
- 
-      </div>
-    </div> -->
-    
-    <!-- Main Feed -->
-    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-    <div class="large-10 columns">
- 
-      <!-- Feed Entry -->
+    <form id="myForm" class="custom" method="GET">
       <div class="row">
-        <div class="large-1 columns small-2"><img src="http://placehold.it/80x80&text=[img]" /></div>
+
+        <div class="large-6 columns">
+          <label for="customDropdown1">Filter by American Pool Office</label>
+          <select id="customDropdown1" class="large" name="organizer">
+            <option>Select an organizer</option>
+            <% @organizers.each do |name| %>
+                  <% if params[:organizer]==name %>
+                      <option selected="selected"><%= name %></option>
+                  <% else %>
+                      <option><%= name %></option>
+                  <% end %>
+            <% end %>
+          </select>
+          <% content_for :after_script_tags do %>
+            <%= javascript_tag do %>
+              $(document).ready(function() {
+                $('#customDropdown1').change(function() {
+                  $('#myForm').submit();
+                });
+              });
+
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+ 
+    <div class="large-10 columns">
+
+      <div class="row">
         <div class="large-10 columns left">
 
-        <h2><%= @training_classes.size %></h2>
-
+        
         <% @training_classes.each do |training_class| %>
-            <h3><%= training_class.title %></h3>
-            <!-- <p><%= training_class.organizer %></p> -->
+            <div class="trainingClass">
+            <h3><%= link_to training_class.title, training_class.eventbrite_url, target: "_blank" %></h3>
+            <strong><%= training_class.ends_at.strftime('%b %d, %Y') %></strong> - <strong><%= training_class.starts_at.strftime('%b %d, %Y') %></strong><br />
+            <p>Location: <%= training_class.event_city %>, <%= training_class.event_state %><br/>
+            Organizer: <%= link_to training_class.event_organizer, training_class.event_organizer_url, target: "_blank" %></p>
+            <ul class="inline-list">
+            <li><%= link_to "Register", training_class.eventbrite_url, class: "button bg-blue", target: "_blank" %></li>
+            <li><a href="#" class="button secondary radius">Share</a></li>
+
+          </ul>
+            </div>
         <% end %>
 
-          <h3><a href="/class">Lifeguard Recertification Class</a><h3>
-          <h5>November 16, 2013 at 9:30 AM</h5>
-          <h5>Location of 12345 Address Baltimore, Maryland</h5>
-          <h5>Organized by this office<h5>
-          <p>This class is for lifeguards that need to be recertified before their certifications expire.</p>
-          <ul class="inline-list">
-            <li><a href="/class" class="button radius gflprimary">Register</a></li>
-            <li><a href="#" class="button secondary radius">Share</a></li>
-          </ul>
         </div>
       </div>
-      <!-- End Feed Entry -->
- 
-      <hr />
- 
-      <!-- Feed Entry -->
-      <div class="row">
-        <div class="large-1 columns small-2"><img src="http://placehold.it/80x80&text=[img]" /></div>
-        <div class="large-10 columns left">
-          <h3><a href="/class">Class Title</a><h3>
-          <h5>November 16, 2013 at 9:30 AM</h5>
-          <h5>Location of 12345 Address Baltimore, Maryland</h5>
-          <h5>Organized by this office<h5>
-          <p>This class is for lifeguards that need to be recertified before their certifications expire.</p>
-          <ul class="inline-list">
-            <li><a href="/class" class="button">Register</a></li>
-            <li><a href="#" class="button secondary">Share</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Feed Entry -->
- 
-      <hr />
- 
-      <!-- Feed Entry -->
-      <div class="row">
-        <div class="large-1 columns small-2"><img src="http://placehold.it/80x80&text=[img]" /></div>
-        <div class="large-10 columns left">
-          <h3><a href="/class">Class Title</a><h3>
-          <h5>November 16, 2013 at 9:30 AM</h5>
-          <h5>Location of 12345 Address Baltimore, Maryland</h5>
-          <h5>Organized by this office</h5>
-          <p>This class is for lifeguards that need to be recertified before their certifications expire.</p>
-          <ul class="inline-list">
-            <li><a href="/class" class="button">Register</a></li>
-            <li><a href="#" class="button secondary">Share</a></li>
-          </ul>
-        </div>
-      </div>
+
+      <%= paginate @training_classes %>
       <!-- End Feed Entry -->
       
-      <hr />
-
- <div class="pagination-centered">
+ <!-- <div class="pagination-centered">
   <ul class="pagination">
     <li class="arrow unavailable"><a href="">&laquo;</a></li>
     <li class="current"><a href="">1</a></li>
@@ -165,9 +76,9 @@
     <li><a href="">13</a></li>
     <li class="arrow"><a href="">&raquo;</a></li>
   </ul>
+</div> -->
+ 
 </div>
-
-    </div>
  
     <!-- Right Sidebar -->
     <!-- On small devices this column is hidden -->
