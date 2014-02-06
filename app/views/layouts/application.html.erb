@@ -15,6 +15,7 @@
 
   	<title><%= content_for?(:title) ? yield(:title) : "Lifeguard Training" %></title>
 
+    <%= favicon_link_tag("favicon.ico") %>
   	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
@@ -73,11 +74,11 @@
         </span>
 
         <nav class="buttons">
-          <a href="#" class="button bg-red">
-            Apply
+          <a href="/#register" class="button bg-red">
+            Register
           </a>
-          <a href="#" class="button bg-blue">
-            Login
+          <a href="http://www.guardforlife.com/" target="_blank" class="button bg-blue">
+            Apply
           </a>
         </nav>
       </div>
