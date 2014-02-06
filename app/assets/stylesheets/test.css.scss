@@ -45,7 +45,7 @@ header nav.primary li a { display: block; padding: .5em 1em; }
 img.banner { margin: 2em 0; display: block;}
 
 
-.social { height: 54px; overflow: hidden; margin: 3em 0; }
+.social { height: 54px; overflow: hidden; margin: 1em 0; }
 .social a { display: block; float: left; background: url('/images/sprite-social.png') 0 0 no-repeat; width: 54px; padding: 54px 0 0; margin-left: 20px; }
 .social a.facebook { margin-left: 16px; }
 .social a.twitter { background-position: -76px 0; }
@@ -54,3 +54,8 @@ img.banner { margin: 2em 0; display: block;}
 
 
 h2 { font-size: 30px; margin: 0; padding-bottom: .5em; }
+
+.row .column, .row .columns {
+padding-left: 1.75em;
+padding-right: 1.75em;
+}

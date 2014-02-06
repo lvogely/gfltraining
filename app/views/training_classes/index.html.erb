@@ -52,8 +52,6 @@
             Organizer: <%= link_to training_class.event_organizer, training_class.event_organizer_url, target: "_blank" %></p>
             <ul class="inline-list">
             <li><%= link_to "Register", training_class.eventbrite_url, class: "button bg-blue", target: "_blank" %></li>
-            <li><a href="#" class="button secondary radius">Share</a></li>
-
           </ul>
             </div>
         <% end %>
@@ -63,28 +61,15 @@
 
       <%= paginate @training_classes %>
       <!-- End Feed Entry -->
-      
- <!-- <div class="pagination-centered">
-  <ul class="pagination">
-    <li class="arrow unavailable"><a href="">&laquo;</a></li>
-    <li class="current"><a href="">1</a></li>
-    <li><a href="">2</a></li>
-    <li><a href="">3</a></li>
-    <li><a href="">4</a></li>
-    <li class="unavailable"><a href="">&hellip;</a></li>
-    <li><a href="">12</a></li>
-    <li><a href="">13</a></li>
-    <li class="arrow"><a href="">&raquo;</a></li>
-  </ul>
-</div> -->
  
 </div>
  
     <!-- Right Sidebar -->
     <!-- On small devices this column is hidden -->
     <aside class="large-2 columns hide-for-small">
-      <p><img src="http://placehold.it/300x440&text=[ad]" /></p>
-      <p><img src="http://placehold.it/300x440&text=[ad]" /></p>
+    <br/>
+      <p><a href="http://www.guardforlife.com/find-a-job/" target="_blank"><img src="/images/hiring-in-your-area-ad.jpg" /></a></p>
+      <p><a href="http://www.guardforlife.com/" target="_blank"><img src="/images/become-a-lifeguard-ad.jpg" /></a></p>
     </aside>
  
   </div>

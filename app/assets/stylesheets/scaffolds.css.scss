@@ -6,9 +6,16 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+ol, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   line-height: 18px;
+  margin-left: 3.5em;
+  font-size: .90em;
 }
 
 header ul {
