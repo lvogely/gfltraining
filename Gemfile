@@ -38,7 +38,7 @@ end
 gem 'eventbrite-client'
 
 # Add Foundation Here
-gem "compass-rails", "~> 2.0.alpha.0" # you need this or you get an err
+gem "compass-rails", "~> 1.1.3" # you need this or you get an err
 
 gem 'zurb-foundation'
 
