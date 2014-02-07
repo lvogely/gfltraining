@@ -91,9 +91,9 @@ body .button { padding: .5em 1.5em; }
 .aligncenter { text-align: center; }
 .alignright { text-align: right; }
 
-.row h1 { font-size: 72px; color: #0da5dd; font-family: Neris-Regular; font-weight: normal; font-style: normal; }
-.row h2 { font-size: 48px; color: #0da5dd; font-family: Neris-Regular; font-weight: normal; font-style: normal; }
-.row h3 { font-size: 24px; color: #0da5dd; font-family: Neris-Regular; font-weight: normal; font-style: normal; }	
+.row h1 { font-size: 72px; color: #0da5dd; }
+.row h2 { font-size: 48px; color: #0da5dd; }
+.row h3 { font-size: 24px; color: #0da5dd; }	
 
 .container { width: 1020px; margin: 0 auto; }
 header { position: relative; }
@@ -103,7 +103,7 @@ header .buttons .button { font-size: 14px; font-weight: normal; color: #fff; tex
 
 header nav.primary { position: absolute; top: 80px; right: 0; list-style: none; padding: 0; margin: 0; font-size: 16px; font-weight: bold; text-transform: uppercase; }
 header nav.primary li { float: left; margin-right: 1em; list-style: none; padding: 0; margin: 0; }
-header nav.primary li a { display: block; padding: .5em 1em; font-family: Neris-Regular; font-weight: normal; font-style: normal; }
+header nav.primary li a { display: block; padding: .5em 1em; }
 
 .top-panel a { color: #e0e9ed; font-weight: bold;}
 .top-panel a:hover { color: #ffffff; }
