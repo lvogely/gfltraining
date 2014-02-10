@@ -48,7 +48,7 @@
         <% @training_classes.each do |training_class| %>
             <div class="trainingClass">
             <h3><%= link_to training_class.title, training_class.eventbrite_url, target: "_blank" %></h3>
-            <strong><%= training_class.ends_at.strftime('%b %d, %Y') %></strong> - <strong><%= training_class.starts_at.strftime('%b %d, %Y') %></strong><br />
+            <strong><%= training_class.starts_at.strftime('%b %d, %Y') %></strong> - <strong><%= training_class.ends_at.strftime('%b %d, %Y') %></strong><br />
             <p>Location: <%= training_class.event_city %>, <%= training_class.event_state %><br/>
             Organizer: <%= link_to training_class.event_organizer, training_class.event_organizer_url, target: "_blank" %></p>
             <ul class="inline-list">
