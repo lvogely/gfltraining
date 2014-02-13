@@ -126,7 +126,7 @@ header nav.primary li a { display: block; padding: .5em 1em; }
 .full-width-banner h1,.full-width-banner h2,.full-width-banner h3,.full-width-banner h4 { text-shadow: 2px 2px 2px rgba(0,0,0,.25); margin: 0; }
 .full-width-banner p { text-shadow: 1px 1px 1px rgba(0,0,0,.5); }
 
-#page-banner { overflow: hidden; height: 225px; background: url('/images/header-training.jpg') no-repeat center; margin: 20px auto; top: 0px; left: 0px; }
+#page-banner { overflow: hidden; height: 225px; background: url('/images/header-training.jpg') no-repeat center; margin: 20px auto; top: 0px; left: 0px; background-size: cover; }
 #page-banner p { width: 1800px; max-width: 100%; }
 
 span.page a { font-size: 1.5em; margin: 0 4px; }
